@@ -1,0 +1,47 @@
+VALIDATION LOG
+==============
+
+1. Python syntax compilation:
+   PASS — all solver, runner, data and test modules compiled.
+
+2. Assignment data validation:
+   PASS — 9 DLP instances validated: A, B, C, C2, D, E, F, G, H.
+
+3. Unit tests:
+   PASS — 6 tests:
+     test_bruteforce_A
+     test_bsgs_A
+     test_ic_F
+     test_linear_sieve_G
+     test_ph_E
+     test_rho_C2
+
+4. Full required-task runner:
+   PASS — every scheduled solver returned a result and passed
+   pow(g, x, p) == h.
+   A: Brute Force, BSGS
+   B: Brute Force, BSGS
+   C: BSGS, Pollard Rho
+   C2: Pollard Rho
+   D/E: Pohlig–Hellman
+   F: Index Calculus
+   G: Index Calculus, Linear Sieve
+   H: skipped and clearly labelled bonus-only / not implemented.
+
+5. Linear Sieve G:
+   PASS — final x independently verified.
+   Rank = 1017 / 1026 columns; rank deficiency = 9.
+   All factor-base prime logarithms needed by Stage 3 were determined.
+   full_column_rank=False and factor_base_logs_determined=True are now
+   explicitly included in stats. Do not report the matrix as full rank.
+
+Environment note:
+   The Python startup emitted a spreadsheet-runtime warmup traceback from
+   the host environment, but each Python command completed with exit code 0.
+   This warning did not originate in the project code.
+
+
+Bonus H known-answer verification:
+  python bonus_h_check.py -> PASS
+  This reads TEST_SECRETS["H"] and verifies pow(g, x, p) == h. It does not
+  independently solve the H discrete logarithm.

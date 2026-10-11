@@ -1,0 +1,49 @@
+Discrete Logarithm Assignment — Part 1
+Running assigned algorithms; each successful x is independently verified.
+[A] Brute force ...
+    recovered and verified (time 0.0148s)
+[A] Baby-step/Giant-step ...
+    recovered and verified (time 0.0002s)
+[B] Brute force ...
+    recovered and verified (time 0.9506s)
+[B] Baby-step/Giant-step ...
+    recovered and verified (time 0.0011s)
+[C] Baby-step/Giant-step ...
+    recovered and verified (time 0.4234s)
+[C] Pollard rho ...
+    recovered and verified (time 1.1846s)
+[C2] Pollard rho ...
+    recovered and verified (time 3.7963s)
+[D] Pohlig-Hellman ...
+    recovered and verified (time 0.0023s)
+[E] Pohlig-Hellman ...
+    recovered and verified (time 0.0003s)
+[F] Index calculus ...
+    recovered and verified (time 0.4467s)
+[G] Index calculus ...
+    recovered and verified (time 9.1841s)
+[G] Linear sieve ...
+    recovered and verified (time 1.1129s)
+[H] H exponent validation PASS; this is not an algorithmic DLP solve.
+
++----------+------------------------------+---------------------+------------------------------------+----------+-----------+--------+
+| Instance | Algorithm                    | Status              | Recovered x                        | Time (s) | Group ops | Memory |
++----------+------------------------------+---------------------+------------------------------------+----------+-----------+--------+
+| A        | Brute force                  | PASS                | 149722                             | 0.0148   | 149722    | 1      |
+| A        | Baby-step/Giant-step         | PASS                | 149722                             | 0.0002   | 1053      | 833    |
+| B        | Brute force                  | PASS                | 9336324                            | 0.9506   | 9336324   | 1      |
+| B        | Baby-step/Giant-step         | PASS                | 9336324                            | 0.0011   | 6848      | 4878   |
+| C        | Baby-step/Giant-step         | PASS                | 349412852845                       | 0.4234   | 1266031   | 859318 |
+| C        | Pollard rho                  | PASS                | 349412852845                       | 1.1846   | 3639029   | 2      |
+| C2       | Pollard rho                  | PASS                | 3623507350375                      | 3.7963   | 12512420  | 2      |
+| D        | Pohlig-Hellman               | PASS                | 3048631699222626176292590840522770 | 0.0023   | 9790      | 1172   |
+| E        | Pohlig-Hellman               | PASS                | 38043505020760957                  | 0.0003   | 2910      | 4      |
+| F        | Index calculus               | PASS                | 772419623157                       | 0.4467   | 4973715   | 209    |
+| G        | Index calculus               | PASS                | 565608321738391                    | 9.1841   | 70192335  | 1086   |
+| G        | Linear sieve                 | PASS                | 565608321738391                    | 1.1129   | 522934    | 2328   |
+| H        | Exponent validation | PASS | 4733727204259496922                | 0.0000   | -         | -      |
++----------+------------------------------+---------------------+------------------------------------+----------+-----------+--------+
+
+Summary: 12 algorithm runs passed; 1 H validation passed; 0 failed.
+Saved: experiments/results/results.csv
+Saved: experiments/results/summary.md
